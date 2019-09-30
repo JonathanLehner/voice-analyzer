@@ -22,7 +22,7 @@ microphonePitch.onPitchChange(pitch => {
   }
 });
 
-window.onload = () => {
+window.onclick = () => {
   var chart = new CanvasJS.Chart("chartContainer", {
   	title :{
   		text: "Pitch Analyzer"
