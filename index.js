@@ -1,6 +1,10 @@
 let pitchData = [];
 let xVal = 0;
 
+function init() {
+  microphonePitch.init(()=>{});
+}
+
 function start() {
   microphonePitch.start(()=>{});
 }
@@ -23,6 +27,7 @@ microphonePitch.onPitchChange(pitch => {
 });
 
 window.onclick = () => {
+  console.log("click event");
   var chart = new CanvasJS.Chart("chartContainer", {
   	title :{
   		text: "Pitch Analyzer"
@@ -38,6 +43,7 @@ window.onclick = () => {
   		dataPoints: pitchData
   	}]
   });
-  //start();
+  init();
+  start();
   setInterval(function(){chart.render()}, 100);
 };

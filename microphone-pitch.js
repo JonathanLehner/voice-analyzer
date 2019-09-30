@@ -22,7 +22,10 @@
 
   // audio and state variables
   // ===========================================================================
-  var audioCtx = new AudioContext();
+  var audioCtx;
+  microphonePitch.init = function() {
+    audioCtx = new AudioContext();
+  }
   var isPaused = true;
   var hasMicrophoneAccess = false;
   var lastPitch;
