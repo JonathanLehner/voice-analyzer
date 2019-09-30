@@ -38,6 +38,6 @@ window.onclick = () => {
   		dataPoints: pitchData
   	}]
   });
-  start();
+  //start();
   setInterval(function(){chart.render()}, 100);
 };
